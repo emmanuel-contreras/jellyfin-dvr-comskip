@@ -23,8 +23,8 @@ fi
 
 comskipini=$HOME/.comskip.ini
 
-deleteedl=true
-deletemeta=true
+deleteedl=false
+deletemeta=false
 deletelog=true
 deletelogo=true
 deletetxt=true
@@ -73,7 +73,7 @@ case $key in
     exit 1
     ;;
     *)
-    if [ -z $infile ]; then
+    if [ -z "$infile" ]; then
       infile=$1
       if [ ! -f "$infile" ]; then
         echo "Inputfile '$infile' doesn't exist. Please check."
@@ -150,7 +150,7 @@ txtfile="$workdir${infile%.*}.txt"
 fi
 
 if [ ! -f "$edlfile" ]; then
-  $comskipPath --ini="$comskipini" "$infile"
+  $comskipPath -d 255 --ini="$comskipini" "$infile"
 
   if [ ! -f "$edlfile" ] ; then
     echo "Error running comskip. EDL File not found: $infile"  1>&3 2>&4 >&2
