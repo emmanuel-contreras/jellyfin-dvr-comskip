@@ -20,7 +20,7 @@ https://github.com/erikkaashoek/Comskip
 ### Changes made to the jellyfin-dvr-comskip script 
 ---
 
-> Note: I am running into *Segmentation fault (core dump)* errors running comskip. It seems to be related to this issue below where the logo.txt file needs to be created and comskip run again. To fix this I run comskip once again if the edl file is not found after running it, all inside comchap, with deletion of the logo.txt file disabled in comchap so that comskip finds that file on the next run 
+> Note: I am running into *Segmentation fault (core dump)* errors running comskip. It seems to be related to the issue below where the logo.txt file needs to be created and then comskip run again. To fix this I run comskip first and if the  edl file is not found after running it, then the logo.txt has already been created and run again. These changes are all inside comchap, where deletion of the logo.txt file is disabled so that comskip finds it on the next run. 
 https://github.com/erikkaashoek/Comskip/issues/158
 
 
