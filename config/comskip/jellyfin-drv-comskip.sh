@@ -18,6 +18,7 @@ __ffmpeg="$(which ffmpeg || echo '/usr/lib/jellyfin-ffmpeg/ffmpeg')"
 #__command="/config/comcut"
 __command="/home/nabiki/Desktop/jellyfin-dvr-comskip/config/comskip/comchap"
 
+# Set the path to the comskip.ini
 __comskip_ini='/home/nabiki/Desktop/jellyfin-dvr-comskip/config/comskip/comskip.ini'
 
 # Set video codec for ffmpeg
